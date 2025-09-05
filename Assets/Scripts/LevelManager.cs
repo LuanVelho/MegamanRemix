@@ -39,9 +39,9 @@ public class LevelManager : MonoBehaviour {
     IEnumerator CreatePlayer()
     {
         wait = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         mycamera.SetPlayer(respawn);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         playerinstance = Instantiate(playerprefab, respawn.transform.position, Quaternion.identity);
         mycamera.SetPlayer(playerinstance);
         life = 1;
